@@ -1,0 +1,20 @@
+{
+  "name": "bot1",
+  "version": "1.0.0",
+  "description": "My first discord bot!",
+  "homepage": "https://github.com/minecraftweter/bot1#readme",
+  "bugs": {
+    "url": "https://github.com/minecraftweter/bot1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minecraftweter/bot1.git"
+  },
+  "license": "ISC",
+  "author": "Coole JC",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
