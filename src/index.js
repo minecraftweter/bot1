@@ -1,6 +1,5 @@
 require("dotenv").config();
 const { Client, IntentsBitField } = require("discord.js");
-const { configDotenv } = require("dotenv");
 
 const bot_client = new Client({
   intents: [
@@ -15,10 +14,14 @@ bot_client.on("clientReady", (c) => {
   console.log(`✅ ${c.user.displayName} is online!`);
 });
 
-bot_client.on("messageCreate", (msg) => {
-  if (!(msg.author.id === "1500537945827049724")) {
-    
-    return;
+bot_client.on("interactionCreate", (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  switch (interaction.commandName) {
+    case "hey":
+      interaction.reply("hey");
+    case "ping":
+      interaction.reply("pong");
   }
 });
 
